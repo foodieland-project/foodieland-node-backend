@@ -1,7 +1,7 @@
 // Set up mongoose connection
 const Order = require('../models/order');
 
-exports.new = async (body) => {
+exports.login = async (body) => {
     let order = new Order(
         {
             body
@@ -18,6 +18,11 @@ exports.new = async (body) => {
     return order;
 };
 
-exports.getAll = async () => {
+exports.logout = async () => {
+    return Order.find({});
+};
+
+
+exports.register = async () => {
     return Order.find({});
 };
